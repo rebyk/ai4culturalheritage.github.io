@@ -12,6 +12,7 @@
         <div class="container">
             <h1>Deep Learning for Cultural Heritage</h1>
             <p>Exploring computer vision for cultural preservation: Object Detection, Segmentation, OCR, and more</p>
+            <img src="header-image.jpg" alt="Cultural Heritage" style="width: 100%; margin-top: 1em; border-radius: 8px;">
         </div>
     </header>
 
@@ -20,7 +21,12 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#glossary">Glossary</a></li>
-                <li><a href="#state-of-the-art">State of the Art</a></li>
+                <li><a href="#state-of-the-art">State of the Art</a>
+                    <ul>
+                        <li><a href="#">Paper Reviews</a></li>
+                        <li><a href="#">Model Comparisons</a></li>
+                    </ul>
+                </li>
                 <li><a href="#tutorials">Tutorials</a></li>
                 <li><a href="#resources">Resources</a></li>
             </ul>
@@ -31,6 +37,7 @@
         <section id="about" class="container">
             <h2>About</h2>
             <p>This platform is dedicated to leveraging deep learning for cultural heritage. From understanding fundamental concepts to exploring the latest models and techniques, we aim to empower researchers and practitioners in preserving and analyzing cultural artifacts.</p>
+            <img src="about-image.jpg" alt="Artifacts" style="width: 100%; margin-top: 1em; border-radius: 8px;">
         </section>
 
         <section id="glossary" class="container">
@@ -47,9 +54,9 @@
             <h2>State of the Art</h2>
             <p>Discover cutting-edge research papers, models, and breakthroughs in the field.</p>
             <ul>
-                <li><a href="#">Paper 1: Title and Abstract</a></li>
-                <li><a href="#">Paper 2: Title and Abstract</a></li>
-                <li><a href="#">Paper 3: Title and Abstract</a></li>
+                <li><a href="#">Paper 1: Explores new techniques in object detection, focusing on historical artifacts.</a></li>
+                <li><a href="#">Paper 2: A comprehensive study of segmentation models applied to cultural heritage data.</a></li>
+                <li><a href="#">Paper 3: OCR advancements for digitizing ancient manuscripts.</a></li>
             </ul>
         </section>
 
@@ -77,6 +84,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Deep Learning for Cultural Heritage. All rights reserved.</p>
+            <p>Follow us on <a href="https://twitter.com">Twitter</a>, <a href="https://github.com">GitHub</a>, or <a href="mailto:contact@culturalheritage.com">contact us</a>.</p>
         </div>
     </footer>
 
@@ -108,6 +116,21 @@
 
         nav ul li {
             margin: 0 1em;
+            position: relative;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            background: #555;
+            list-style: none;
+            margin: 0;
+            padding: 0.5em 1em;
+            display: none;
+            z-index: 1000;
+        }
+
+        nav ul li:hover ul {
+            display: block;
         }
 
         nav ul li a {
@@ -130,6 +153,15 @@
             color: white;
             text-align: center;
             padding: 1em 0;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </body>
