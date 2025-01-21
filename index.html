@@ -3,9 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exploring deep learning and computer vision applications for cultural heritage preservation and analysis">
     <title>Deep Learning for Cultural Heritage</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+        }
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-end mb-4 space-x-2">
+                <button onclick="switchLanguage('en')" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">English</button>
+                <button onclick="switchLanguage('fr')" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Français</button>
+            </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl font-bold mb-4" data-lang="en">Deep Learning for Cultural Heritage</h1>
+                <h1 class="text-4xl font-bold mb-4" data-lang="fr" style="display: none;">Apprentissage Profond pour le Patrimoine Culturel</h1>
+                <p class="text-xl" data-lang="en">Advancing cultural preservation through artificial intelligence and computer vision</p>
+                <p class="text-xl" data-lang="fr" style="display: none;">Faire progresser la préservation culturelle grâce à l'intelligence artificielle et la vision par ordinateur</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-8 py-4">
+                <a href="#about" class="hover:text-blue-600 font-medium" data-lang="en">About</a>
+                <a href="#about" class="hover:text-blue-600 font-medium" data-lang="fr" style="display: none;">À propos</a>
+                <a href="#research" class="hover:text-blue-600 font-medium" data-lang="en">Research</a>
+                <a href="#research" class="hover:text-blue-600 font-medium" data-lang="fr" style="display: none;">Recherche</a>
+                <a href="#tutorials" class="hover:text-blue-600 font-medium" data-lang="en">Tutorials</a>
+                <a href="#tutorials" class="hover:text-blue-600 font-medium" data-lang="fr" style="display: none;">Tutoriels</a>
+                <a href="#resources" class="hover:text-blue-600 font-medium" data-lang="en">Resources</a>
+                <a href="#resources" class="hover:text-blue-600 font-medium" data-lang="fr" style="display: none;">Ressources</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="en">About the Project</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="fr" style="display: none;">À propos du Projet</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-lg mb-4" data-lang="en">
+                        This initiative explores the intersection of artificial intelligence and cultural heritage preservation. We focus on developing and applying state-of-the-art computer vision techniques to help preserve, analyze, and understand cultural artifacts and historical documents.
+                    </p>
+                    <p class="text-lg mb-4" data-lang="fr" style="display: none;">
+                        Cette initiative explore l'intersection entre l'intelligence artificielle et la préservation du patrimoine culturel. Nous nous concentrons sur le développement et l'application de techniques de vision par ordinateur de pointe pour aider à préserver, analyser et comprendre les artefacts culturels et les documents historiques.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Key Focus Areas:</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Domaines clés :</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li data-lang="en">Object Detection and Classification</li>
+                        <li data-lang="fr" style="display: none;">Détection et Classification d'Objets</li>
+                        <li data-lang="en">Semantic Segmentation</li>
+                        <li data-lang="fr" style="display: none;">Segmentation Sémantique</li>
+                        <li data-lang="en">Text Recognition (OCR)</li>
+                        <li data-lang="fr" style="display: none;">Reconnaissance de Texte (OCR)</li>
+                        <li data-lang="en">3D Reconstruction</li>
+                        <li data-lang="fr" style="display: none;">Reconstruction 3D</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="en">Latest Research</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="fr" style="display: none;">Recherches Récentes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Object Detection</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Détection d'Objets</h3>
+                    <p data-lang="en">Exploring transformer-based architectures for artifact detection and classification in museum collections.</p>
+                    <p data-lang="fr" style="display: none;">Explorer les architectures basées sur les transformers pour la détection et la classification d'artefacts dans les collections muséales.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Document Analysis</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Analyse de Documents</h3>
+                    <p data-lang="en">Advanced OCR techniques for historical manuscripts and degraded documents.</p>
+                    <p data-lang="fr" style="display: none;">Techniques OCR avancées pour les manuscrits historiques et les documents dégradés.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">3D Reconstruction</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Reconstruction 3D</h3>
+                    <p data-lang="en">Novel approaches to 3D modeling of artifacts from multiple 2D images.</p>
+                    <p data-lang="fr" style="display: none;">Nouvelles approches de la modélisation 3D d'artefacts à partir de plusieurs images 2D.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tutorials" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="en">Tutorials & Guides</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="fr" style="display: none;">Tutoriels et Guides</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Getting Started</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Premiers Pas</h3>
+                    <ul class="space-y-4">
+                        <li data-lang="en">
+                            <a href="#" class="text-blue-600 hover:underline">Introduction to Computer Vision for Cultural Heritage</a>
+                        </li>
+                        <li data-lang="fr" style="display: none;">
+                            <a href="#" class="text-blue-600 hover:underline">Introduction à la Vision par Ordinateur pour le Patrimoine Culturel</a>
+                        </li>
+                        <li data-lang="en">
+                            <a href="#" class="text-blue-600 hover:underline">Setting Up Your Development Environment</a>
+                        </li>
+                        <li data-lang="fr" style="display: none;">
+                            <a href="#" class="text-blue-600 hover:underline">Configuration de Votre Environnement de Développement</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Advanced Topics</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Sujets Avancés</h3>
+                    <ul class="space-y-4">
+                        <li data-lang="en">
+                            <a href="#" class="text-blue-600 hover:underline">Fine-tuning Models for Artifact Detection</a>
+                        </li>
+                        <li data-lang="fr" style="display: none;">
+                            <a href="#" class="text-blue-600 hover:underline">Ajustement des Modèles pour la Détection d'Artefacts</a>
+                        </li>
+                        <li data-lang="en">
+                            <a href="#" class="text-blue-600 hover:underline">Building Custom Datasets</a>
+                        </li>
+                        <li data-lang="fr" style="display: none;">
+                            <a href="#" class="text-blue-600 hover:underline">Construction de Jeux de Données Personnalisés</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="en">Resources</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center" data-lang="fr" style="display: none;">Ressources</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Datasets</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Jeux de Données</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-600 hover:underline">Historical Manuscript Dataset</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline">Museum Artifact Collection</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline">Archaeological Findings Database</a></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Tools</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Outils</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-600 hover:underline">Model Zoo</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline">Annotation Tools</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline">Evaluation Scripts</a></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold mb-4" data-lang="en">Publications</h3>
+                    <h3 class="font-bold mb-4" data-lang="fr" style="display: none;">Publications</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-600 hover:underline">Research Papers</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline">Technical Reports</a></li>
+                        <li><a href="#" class="text-blue-600 hover:underline">Case Studies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p data-lang="en">© 2024 Deep Learning for Cultural Heritage. All rights reserved.</p>
+            <p data-lang="fr" style="display: none;">© 2024 Apprentissage Profond pour le Patrimoine Culturel. Tous droits réservés.</p>
+        </div>
+    </footer>
+
     <script>
         function switchLanguage(lang) {
             document.querySelectorAll('[data-lang]').forEach(element => {
@@ -13,85 +201,6 @@
             });
         }
     </script>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1 data-lang="en">Deep Learning for Cultural Heritage</h1>
-            <h1 data-lang="fr" style="display: none;">Apprentissage Profond pour le Patrimoine Culturel</h1>
-            <p data-lang="en">Exploring computer vision for cultural preservation: Object Detection, Segmentation, OCR, and more</p>
-            <p data-lang="fr" style="display: none;">Explorer la vision par ordinateur pour la préservation culturelle : détection d'objets, segmentation, OCR et plus encore</p>
-            <img src="header-image.jpg" alt="Cultural Heritage" style="width: 100%; margin-top: 1em; border-radius: 8px;">
-            <button onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('fr')">Français</button>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="fr" style="display: none;">À propos</a></li>
-                <li><a href="#glossary" data-lang="en">Glossary</a><a href="#glossary" data-lang="fr" style="display: none;">Glossaire</a></li>
-                <li><a href="#state-of-the-art" data-lang="en">State of the Art</a><a href="#state-of-the-art" data-lang="fr" style="display: none;">État de l'art</a></li>
-                <li><a href="#tutorials" data-lang="en">Tutorials</a><a href="#tutorials" data-lang="fr" style="display: none;">Tutoriels</a></li>
-                <li><a href="#resources" data-lang="en">Resources</a><a href="#resources" data-lang="fr" style="display: none;">Ressources</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <section id="about" class="container">
-            <h2 data-lang="en">About</h2>
-            <h2 data-lang="fr" style="display: none;">À propos</h2>
-            <p data-lang="en">This platform is dedicated to leveraging deep learning for cultural heritage. From understanding fundamental concepts to exploring the latest models and techniques, we aim to empower researchers and practitioners in preserving and analyzing cultural artifacts.</p>
-            <p data-lang="fr" style="display: none;">Cette plateforme est dédiée à l'utilisation de l'apprentissage profond pour le patrimoine culturel. De la compréhension des concepts fondamentaux à l'exploration des derniers modèles et techniques, nous visons à outiller les chercheurs et praticiens pour préserver et analyser les artefacts culturels.</p>
-            <img src="about-image.jpg" alt="Artifacts" style="width: 100%; margin-top: 1em; border-radius: 8px;">
-        </section>
-
-        <section id="glossary" class="container">
-            <h2 data-lang="en">Glossary</h2>
-            <h2 data-lang="fr" style="display: none;">Glossaire</h2>
-            <p data-lang="en">Explore key terms and definitions in computer vision and cultural heritage preservation.</p>
-            <p data-lang="fr" style="display: none;">Explorez les termes clés et les définitions dans la vision par ordinateur et la préservation du patrimoine culturel.</p>
-            <ul>
-                <li data-lang="en"><strong>Object Detection:</strong> Identifying and localizing objects within an image.</li>
-                <li data-lang="fr" style="display: none;"><strong>Détection d'objets :</strong> Identifier et localiser les objets dans une image.</li>
-                <li data-lang="en"><strong>Segmentation:</strong> Partitioning an image into meaningful regions.</li>
-                <li data-lang="fr" style="display: none;"><strong>Segmentation :</strong> Diviser une image en régions significatives.</li>
-                <li data-lang="en"><strong>OCR (Optical Character Recognition):</strong> Extracting text from images.</li>
-                <li data-lang="fr" style="display: none;"><strong>OCR (Reconnaissance Optique de Caractères) :</strong> Extraire du texte des images.</li>
-            </ul>
-        </section>
-
-        <section id="state-of-the-art" class="container">
-            <h2 data-lang="en">State of the Art</h2>
-            <h2 data-lang="fr" style="display: none;">État de l'art</h2>
-            <p data-lang="en">Discover cutting-edge research papers, models, and breakthroughs in the field.</p>
-            <p data-lang="fr" style="display: none;">Découvrez les articles de recherche, modèles et percées de pointe dans le domaine.</p>
-            <ul>
-                <li><a href="#" data-lang="en">Paper 1: Explores new techniques in object detection, focusing on historical artifacts.</a><a href="#" data-lang="fr" style="display: none;">Article 1 : Explore de nouvelles techniques de détection d'objets, axées sur les artefacts historiques.</a></li>
-                <li><a href="#" data-lang="en">Paper 2: A comprehensive study of segmentation models applied to cultural heritage data.</a><a href="#" data-lang="fr" style="display: none;">Article 2 : Une étude complète des modèles de segmentation appliqués aux données du patrimoine culturel.</a></li>
-                <li><a href="#" data-lang="en">Paper 3: OCR advancements for digitizing ancient manuscripts.</a><a href="#" data-lang="fr" style="display: none;">Article 3 : Avancées en OCR pour la numérisation de manuscrits anciens.</a></li>
-            </ul>
-        </section>
-
-        <section id="tutorials" class="container">
-            <h2 data-lang="en">Tutorials</h2>
-            <h2 data-lang="fr" style="display: none;">Tutoriels</h2>
-            <p data-lang="en">Learn through step-by-step guides and hands-on code notebooks:</p>
-            <p data-lang="fr" style="display: none;">Apprenez à travers des guides étape par étape et des cahiers de code pratiques :</p>
-            <ul>
-                <li><a href="#" data-lang="en">Introduction to Object Detection with Python</a><a href="#" data-lang="fr" style="display: none;">Introduction à la détection d'objets avec Python</a></li>
-                <li><a href="#" data-lang="en">Image Segmentation Using Deep Learning</a><a href="#" data-lang="fr" style="display: none;">Segmentation d'images à l'aide de l'apprentissage profond</a></li>
-                <li><a href="#" data-lang="en">Implementing OCR for Historical Documents</a><a href="#" data-lang="fr" style="display: none;">Implémentation de l'OCR pour les documents historiques</a></li>
-            </ul>
-        </section>
-
-        <section id="resources" class="container">
-            <h2 data-lang="en">Resources</h2>
-            <h2 data-lang="fr" style="display: none;">Ressources</h2>
-            <p data-lang="en">Find tools, datasets, and repositories to support your projects.</p>
-            <p data-lang="fr" style="display: none;">Trouvez des outils, des ensembles de données et des dépôts pour soutenir vos projets.</p>
-            <ul>
-                <li><a href="#" data-lang="en">Dataset 1</a><a href="#" data-lang="fr" style="display: none;">Ensemble de données 1</a></li>
-                <li><a href="#" data-lang="en">Repository 1
+</body>
+</html>
+</antArt
