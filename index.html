@@ -6,163 +6,92 @@
     <title>Deep Learning for Cultural Heritage</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.style.display = element.getAttribute('data-lang') === lang ? 'block' : 'none';
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Deep Learning for Cultural Heritage</h1>
-            <p>Exploring computer vision for cultural preservation: Object Detection, Segmentation, OCR, and more</p>
+            <h1 data-lang="en">Deep Learning for Cultural Heritage</h1>
+            <h1 data-lang="fr" style="display: none;">Apprentissage Profond pour le Patrimoine Culturel</h1>
+            <p data-lang="en">Exploring computer vision for cultural preservation: Object Detection, Segmentation, OCR, and more</p>
+            <p data-lang="fr" style="display: none;">Explorer la vision par ordinateur pour la préservation culturelle : détection d'objets, segmentation, OCR et plus encore</p>
             <img src="header-image.jpg" alt="Cultural Heritage" style="width: 100%; margin-top: 1em; border-radius: 8px;">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('fr')">Français</button>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#glossary">Glossary</a></li>
-                <li><a href="#state-of-the-art">State of the Art</a>
-                    <ul>
-                        <li><a href="#">Paper Reviews</a></li>
-                        <li><a href="#">Model Comparisons</a></li>
-                    </ul>
-                </li>
-                <li><a href="#tutorials">Tutorials</a></li>
-                <li><a href="#resources">Resources</a></li>
+                <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="fr" style="display: none;">À propos</a></li>
+                <li><a href="#glossary" data-lang="en">Glossary</a><a href="#glossary" data-lang="fr" style="display: none;">Glossaire</a></li>
+                <li><a href="#state-of-the-art" data-lang="en">State of the Art</a><a href="#state-of-the-art" data-lang="fr" style="display: none;">État de l'art</a></li>
+                <li><a href="#tutorials" data-lang="en">Tutorials</a><a href="#tutorials" data-lang="fr" style="display: none;">Tutoriels</a></li>
+                <li><a href="#resources" data-lang="en">Resources</a><a href="#resources" data-lang="fr" style="display: none;">Ressources</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
         <section id="about" class="container">
-            <h2>About</h2>
-            <p>This platform is dedicated to leveraging deep learning for cultural heritage. From understanding fundamental concepts to exploring the latest models and techniques, we aim to empower researchers and practitioners in preserving and analyzing cultural artifacts.</p>
+            <h2 data-lang="en">About</h2>
+            <h2 data-lang="fr" style="display: none;">À propos</h2>
+            <p data-lang="en">This platform is dedicated to leveraging deep learning for cultural heritage. From understanding fundamental concepts to exploring the latest models and techniques, we aim to empower researchers and practitioners in preserving and analyzing cultural artifacts.</p>
+            <p data-lang="fr" style="display: none;">Cette plateforme est dédiée à l'utilisation de l'apprentissage profond pour le patrimoine culturel. De la compréhension des concepts fondamentaux à l'exploration des derniers modèles et techniques, nous visons à outiller les chercheurs et praticiens pour préserver et analyser les artefacts culturels.</p>
             <img src="about-image.jpg" alt="Artifacts" style="width: 100%; margin-top: 1em; border-radius: 8px;">
         </section>
 
         <section id="glossary" class="container">
-            <h2>Glossary</h2>
-            <p>Explore key terms and definitions in computer vision and cultural heritage preservation.</p>
+            <h2 data-lang="en">Glossary</h2>
+            <h2 data-lang="fr" style="display: none;">Glossaire</h2>
+            <p data-lang="en">Explore key terms and definitions in computer vision and cultural heritage preservation.</p>
+            <p data-lang="fr" style="display: none;">Explorez les termes clés et les définitions dans la vision par ordinateur et la préservation du patrimoine culturel.</p>
             <ul>
-                <li><strong>Object Detection:</strong> Identifying and localizing objects within an image.</li>
-                <li><strong>Segmentation:</strong> Partitioning an image into meaningful regions.</li>
-                <li><strong>OCR (Optical Character Recognition):</strong> Extracting text from images.</li>
+                <li data-lang="en"><strong>Object Detection:</strong> Identifying and localizing objects within an image.</li>
+                <li data-lang="fr" style="display: none;"><strong>Détection d'objets :</strong> Identifier et localiser les objets dans une image.</li>
+                <li data-lang="en"><strong>Segmentation:</strong> Partitioning an image into meaningful regions.</li>
+                <li data-lang="fr" style="display: none;"><strong>Segmentation :</strong> Diviser une image en régions significatives.</li>
+                <li data-lang="en"><strong>OCR (Optical Character Recognition):</strong> Extracting text from images.</li>
+                <li data-lang="fr" style="display: none;"><strong>OCR (Reconnaissance Optique de Caractères) :</strong> Extraire du texte des images.</li>
             </ul>
         </section>
 
         <section id="state-of-the-art" class="container">
-            <h2>State of the Art</h2>
-            <p>Discover cutting-edge research papers, models, and breakthroughs in the field.</p>
+            <h2 data-lang="en">State of the Art</h2>
+            <h2 data-lang="fr" style="display: none;">État de l'art</h2>
+            <p data-lang="en">Discover cutting-edge research papers, models, and breakthroughs in the field.</p>
+            <p data-lang="fr" style="display: none;">Découvrez les articles de recherche, modèles et percées de pointe dans le domaine.</p>
             <ul>
-                <li><a href="#">Paper 1: Explores new techniques in object detection, focusing on historical artifacts.</a></li>
-                <li><a href="#">Paper 2: A comprehensive study of segmentation models applied to cultural heritage data.</a></li>
-                <li><a href="#">Paper 3: OCR advancements for digitizing ancient manuscripts.</a></li>
+                <li><a href="#" data-lang="en">Paper 1: Explores new techniques in object detection, focusing on historical artifacts.</a><a href="#" data-lang="fr" style="display: none;">Article 1 : Explore de nouvelles techniques de détection d'objets, axées sur les artefacts historiques.</a></li>
+                <li><a href="#" data-lang="en">Paper 2: A comprehensive study of segmentation models applied to cultural heritage data.</a><a href="#" data-lang="fr" style="display: none;">Article 2 : Une étude complète des modèles de segmentation appliqués aux données du patrimoine culturel.</a></li>
+                <li><a href="#" data-lang="en">Paper 3: OCR advancements for digitizing ancient manuscripts.</a><a href="#" data-lang="fr" style="display: none;">Article 3 : Avancées en OCR pour la numérisation de manuscrits anciens.</a></li>
             </ul>
         </section>
 
         <section id="tutorials" class="container">
-            <h2>Tutorials</h2>
-            <p>Learn through step-by-step guides and hands-on code notebooks:</p>
+            <h2 data-lang="en">Tutorials</h2>
+            <h2 data-lang="fr" style="display: none;">Tutoriels</h2>
+            <p data-lang="en">Learn through step-by-step guides and hands-on code notebooks:</p>
+            <p data-lang="fr" style="display: none;">Apprenez à travers des guides étape par étape et des cahiers de code pratiques :</p>
             <ul>
-                <li><a href="#">Introduction to Object Detection with Python</a></li>
-                <li><a href="#">Image Segmentation Using Deep Learning</a></li>
-                <li><a href="#">Implementing OCR for Historical Documents</a></li>
+                <li><a href="#" data-lang="en">Introduction to Object Detection with Python</a><a href="#" data-lang="fr" style="display: none;">Introduction à la détection d'objets avec Python</a></li>
+                <li><a href="#" data-lang="en">Image Segmentation Using Deep Learning</a><a href="#" data-lang="fr" style="display: none;">Segmentation d'images à l'aide de l'apprentissage profond</a></li>
+                <li><a href="#" data-lang="en">Implementing OCR for Historical Documents</a><a href="#" data-lang="fr" style="display: none;">Implémentation de l'OCR pour les documents historiques</a></li>
             </ul>
         </section>
 
         <section id="resources" class="container">
-            <h2>Resources</h2>
-            <p>Find tools, datasets, and repositories to support your projects.</p>
+            <h2 data-lang="en">Resources</h2>
+            <h2 data-lang="fr" style="display: none;">Ressources</h2>
+            <p data-lang="en">Find tools, datasets, and repositories to support your projects.</p>
+            <p data-lang="fr" style="display: none;">Trouvez des outils, des ensembles de données et des dépôts pour soutenir vos projets.</p>
             <ul>
-                <li><a href="#">Dataset 1</a></li>
-                <li><a href="#">Repository 1</a></li>
-                <li><a href="#">Tool 1</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Deep Learning for Cultural Heritage. All rights reserved.</p>
-            <p>Follow us on <a href="https://twitter.com">Twitter</a>, <a href="https://github.com">GitHub</a>, or <a href="mailto:contact@culturalheritage.com">contact us</a>.</p>
-        </div>
-    </footer>
-
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #333;
-            color: white;
-            padding: 2em 0;
-            text-align: center;
-        }
-
-        nav {
-            background: #444;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 1em;
-            position: relative;
-        }
-
-        nav ul li ul {
-            position: absolute;
-            background: #555;
-            list-style: none;
-            margin: 0;
-            padding: 0.5em 1em;
-            display: none;
-            z-index: 1000;
-        }
-
-        nav ul li:hover ul {
-            display: block;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 2em 0;
-        }
-
-        section {
-            margin-bottom: 2em;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</body>
-</html>
+                <li><a href="#" data-lang="en">Dataset 1</a><a href="#" data-lang="fr" style="display: none;">Ensemble de données 1</a></li>
+                <li><a href="#" data-lang="en">Repository 1
