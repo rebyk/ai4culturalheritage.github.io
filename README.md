@@ -60,7 +60,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or suggestions, please email us at [contact@culturalheritage.com](mailto:contact@culturalheritage.com) or connect with us on [Twitter](https://twitter.com) and [GitHub](https://github.com).
+For questions or suggestions, please don't.
 
 ---
 
